@@ -19,7 +19,7 @@ export default function Hero() {
         {/* Logo / Titel: Bild hat viel Rand, daher breiter als der Bildschirm skaliert */}
         <h1 className="w-[145vw] max-w-none sm:w-[950px] lg:w-[1300px]">
           <Image
-            src="/images/Benny_Titel.png"
+            src="/images/benny_Titel.png"
             alt="Bennys Winterrätsel"
             width={2000}
             height={460}
