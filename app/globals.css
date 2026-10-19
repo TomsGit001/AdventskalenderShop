@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-night-900 font-body text-base text-snow antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-cta {
+    @apply inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-full bg-hut px-8 py-4
+      font-display text-lg font-semibold text-white shadow-lg transition
+      hover:bg-hut-600 active:scale-[0.97] animate-glow sm:w-auto;
+  }
+  .section {
+    @apply mx-auto w-full max-w-5xl px-5 pb-24 pt-14 sm:px-8 sm:py-20;
+  }
+  .section-title {
+    @apply text-center text-3xl font-semibold leading-tight sm:text-4xl;
+  }
+  .snow-title {
+    color: #6ef0d2;
+    -webkit-text-stroke: 0;
+    text-shadow:
+      0 3px 0 #1a8f7a,
+      0 6px 0 #146f5f,
+      0 10px 18px rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.02em;
+  }
+}
+
+.snow-cap {
+  position: relative;
+}
+.snow-cap::before {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: -0.12em;
+  height: 0.28em;
+  border-radius: 999px;
+  background: #fff;
+  opacity: 0.95;
+  filter: blur(0.5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fall, .animate-float, .animate-float-soft, .animate-glow {
+    animation: none !important;
+  }
+}
