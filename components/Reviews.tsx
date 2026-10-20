@@ -11,20 +11,61 @@ const MAX_TEXT = 600;
 const INITIAL_REVIEWS: Review[] = [
   {
     quote:
-      "Das Buch ist super! Endlich ein Adventskalender, der nicht nur die Augen, sondern auch den Geist beschäftigt :) Mein Sohn fragt immer, wann wir das nächste Türchen lesen können.",
-    name: "Julia, Mama von Leo (6)",
+      "Das Buch ist super ! endlich ein Adventskalender, der nicht nur die Augen, sondern auch den Geist beschäftigt :) Mein Sohn fragt immer, wann wir das nächste Türchen lesen können.",
+    name: "Viktoria, Mama von Lucia (6)",
     rating: 5,
   },
   {
     quote:
-      "Endlich ein Adventskalender, bei dem ich mich nicht über Zucker nachdenken muss. Die Rätsel sind genau richtig eingestuft. Es fördert definitiv das logische Denken.",
+      " Ich kenne das Buch noch vom letzten Jahr. Endlich ein Adventskalender, bei dem ich mich nicht über Zucker nachdenken muss. Die Rätsel sind genau richtig eingestuft. Es fördert defnitiv das logische Denken.",
     name: "Sandra, Mama von Mia (7)",
     rating: 5,
   },
   {
     quote:
-      "Das schönste Geschenk in unserer Adventszeit. Auch die älteren Geschwister rätseln mit – ein echtes Familienerlebnis.",
+      "Das schönste Geschenk in unserer Adventszeit. Ich habe direkt 3 Stück bestellt, damit jeder seinen eigenen Adventskalender hat. Ein echtes Familienerlebnis.",
     name: "Katharina, Mama von drei Kindern",
+    rating: 5,
+  },
+  {
+    quote:
+      "Ich war erst skeptisch, ob ein Rätsel Adventskalender bei meiner Tochter ankommt – aber sie ist absolut begeistert! Jeden Morgen ist der erste Weg direkt zum Buch. Perfekte Mischung aus Spannung und Weihnachtsstimmung.",
+    name: "Sarah, Mama von Mia (7)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Als Papa freue ich mich riesig über die gemeinsame Zeit beim Rätseln. Keine Schokolade, dafür echte Vorfreude und tolle Gespräche jeden Abend vor dem Einschlafen. Eine klare Empfehlung für die Adventszeit!",
+    name: "Raoul, Papa von Marco (8)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Ich habe das Buch meinem Neffen geschenkt und meine Schwester sagt es ist es das absolute Highlight im Dezember. Die Rätsel sind genau richtig knifflig und superschön gestalte t. Nächstes Jahr definitiv wieder!",
+    name: "Sabine, Tante von Jonas (6)",
+    rating: 5,
+  },
+  {
+    quote: "Ein Stern abzug aufgrund des Versands, das Buch brauchte 3 Tage bis es ankam. Zum Glück aber noch vor dem 1. Dezember. Inhaltlich aber top, meine Tochter liebt es! Auch schöne Illustrationen.",
+    name: "Silke, Mama von Mia (7)",
+    rating: 4,
+  },
+  {
+    quote:
+      "Endlich mal kein billiges Plastikspielzeug, das nach zwei Tagen in der Ecke liegt. Meine zwei Mädels knobeln jeden Tag zusammen und können es kaum erwarten, wie die Geschichte weitergeht. Einfach wundervoll gemacht!",
+    name: "Maren, Mama von Emma (5) & Maria (8)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Richtig tolles Konzept! Sogar mein sonst eher lesefauler Sohn bringt mir freiwillig das Buch und möchte wissen, wie das Rätsel gelöst wird. Das hat unsere Adventsroutine komplett bereichert.",
+    name: "Stefanie, Mama von Tim (9)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch letztes Jahr von der Tante geschenkt bekommen und mussten es dieses Jahr direkt wieder bestellen. Es ist mittlerweile unsere liebste Familientradition im Dezember geworden!",
+    name: "Laura, Mama von Noah (7)",
     rating: 5,
   },
 ];
