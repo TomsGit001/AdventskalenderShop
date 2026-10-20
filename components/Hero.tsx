@@ -76,16 +76,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Schneelandschaft */}
+      {/* Wellenartiger Übergang zur nächsten Section (Farbe = Hintergrund der Folgesection) */}
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="relative -mt-6 block h-16 w-full sm:h-24"
+        className="relative -mb-px block h-16 w-full sm:h-24"
         aria-hidden
       >
         <path
           d="M0,70 C240,20 420,110 720,70 C1020,30 1200,100 1440,50 L1440,120 L0,120 Z"
-          fill="#F6FAFD"
+          fill="#79c4d0"
         />
       </svg>
     </header>
