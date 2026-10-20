@@ -8,7 +8,7 @@ const config: Config = {
         night: { 950: "#071F30", 900: "#0B3047", 800: "#0F4560", 700: "#165A75", 600: "#1F7490" },
         snow: { DEFAULT: "#F6FAFD", 100: "#EAF3F9", 200: "#D5E6F0" },
         mint: { DEFAULT: "#6EF0D2", 400: "#4FE0BE", 600: "#22B596" },
-        hut: { DEFAULT: "#D6402F", 600: "#B93223", 700: "#9A2518" },
+        hut: { DEFAULT: "#D1423B", 600: "#B5322C", 700: "#96261F" },
         balloon: { blue: "#B8CCE6", sand: "#E8D5B5", rose: "#F4D6D0" },
         gold: { DEFAULT: "#F6AE4E", 600: "#E39221" },
       },

@@ -4,7 +4,7 @@ import { Deco, DecoIcon, type DecoName } from "./Deco";
 const POINTS: { icon: DecoName; title: string; text: string }[] = [
   { icon: "dance", title: "Rätsel für kleine Detektive", text: "Labyrinthe, Suchbilder, Logikaufgaben und Wortspiele – jeden Tag eine neue Knobelei." },
   { icon: "balloonBear", title: "Abenteuer mit Benny", text: "Der kleine Bär schwebt am Luftballon durch den Winterwald und erlebt jeden Tag etwas Neues." },
-  { icon: "walk", title: "Zeit zu zweit", text: "Kurze Geschichten zum rätseln – perfekt für den ruhigen Moment am Abend." },
+  { icon: "walk", title: "Zeit zu zweit", text: "Kurze Geschichten zum Rätseln – perfekt für den ruhigen Moment am Abend." },
 ];
 
 export default function ProductDetails() {

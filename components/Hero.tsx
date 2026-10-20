@@ -33,7 +33,7 @@ export default function Hero() {
         </p>
 
         <h2 className="mt-8 text-2xl font-semibold leading-snug text-snow sm:text-4xl">
-          Die sinnvollste Adventszeit für dein Kind ✨
+          Die sinnvolle Adventszeit für dein Kind ✨
         </h2>
         <p className="mt-3 max-w-xl text-base leading-relaxed text-snow-200 sm:text-lg">
           24 Türchen voller Magie, Rätselspaß und gemeinsamer Momente – statt Zucker
@@ -80,7 +80,7 @@ export default function Hero() {
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="relative -mb-px block h-16 w-full sm:h-24"
+        className="relative block h-16 w-full sm:h-24"
         aria-hidden
       >
         <path

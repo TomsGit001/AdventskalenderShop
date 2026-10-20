@@ -88,7 +88,26 @@ export default function Reviews() {
   const [ownReviews, setOwnReviews] = useState<Review[]>([]);
   const [rating, setRating] = useState(5);
   const [justSent, setJustSent] = useState(false);
+  const [visible, setVisible] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
+  const boxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = boxRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          setVisible(true);
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "-30% 0px -30% 0px", threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   // Gespeicherte eigene Rezensionen laden
   useEffect(() => {
@@ -143,7 +162,12 @@ export default function Reviews() {
     <div className="mt-16">
       <h2 className="section-title text-night-800">Was andere Mütter sagen</h2>
 
-      <div className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-3xl bg-white shadow-md ring-1 ring-night-900/5">
+      <div
+        ref={boxRef}
+        className={`mx-auto mt-8 max-w-4xl overflow-hidden rounded-3xl bg-white shadow-md ring-1 ring-night-900/5 transition-all duration-700 ease-out ${
+          visible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
+        }`}
+      >
         <button
           type="button"
           aria-expanded={open}

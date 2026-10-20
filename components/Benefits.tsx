@@ -17,21 +17,21 @@ const BENEFITS: {
     image: "/images/icon_benny6.png",
     title: "Fördert Denken & Logik",
     text: "24 knifflige Rätsel, die spielerisch die Konzentration schärfen – ganz ohne Bildschirm.",
-    quote: "„Mein Sohn fragt jeden Tag, wann wir weiterlesen!“",
+    quote: "„[...]. Mein Sohn fragt jeden Tag, wann wir weiterlesen!“",
     author: "Julia, Mama von Leo",
   },
   {
     image: "/images/icon_benny7.png",
     title: "100% Sinnvoll, 0% Zucker",
-    text: "Die wertvolle Alternative zum klassischen Schoko-Adventskalender – hält als Erinnerung fürs Leben.",
-    quote: "„Endlich mal kein billiger Süßkram im Dezember.“",
+    text: "Die wertvolle Alternative zum klassischen Schoko-Adventskalender – hält als Erinnerung für die Kindheit.",
+    quote: "„[...]. Endlich mal kein billiger Süßkram im Dezember.“",
     author: "Sarah, Mama von Mia",
   },
   {
     image: "/images/icon_benny8.png",
     title: "Gemeinsame Abendrituale",
     text: "Jeden Abend ein magisches Türchen voller Geborgenheit und Vorfreude vor dem Einschlafen.",
-    quote: "„Unser liebstes Ritual in der Adventszeit geworden.“",
+    quote: "„... Ist unser liebstes Ritual in der Adventszeit geworden.“",
     author: "Markus, Papa von Ben",
   },
 ];
@@ -65,7 +65,7 @@ export default function Benefits() {
       {
         // Nur der mittlere Bereich des Viewports zählt als "Fokus".
         // Karte erscheint erst, wenn sie sich der Bildschirmmitte nähert.
-        rootMargin: "-40% 0px -40% 0px",
+        rootMargin: "-30% 0px -30% 0px",
         threshold: 0,
       }
     );
@@ -124,6 +124,19 @@ export default function Benefits() {
           <CtaButton />
         </div>
       </div>
+
+      {/* Wellenartiger Übergang zur nächsten Section (Farbe = Hintergrund der Folgesection) */}
+      <svg
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        className="relative block h-16 w-full sm:h-24"
+        aria-hidden
+      >
+        <path
+          d="M0,70 C240,20 420,110 720,70 C1020,30 1200,100 1440,50 L1440,120 L0,120 Z"
+          fill="#0B3047"
+        />
+      </svg>
     </section>
   );
 }
