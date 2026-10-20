@@ -11,9 +11,9 @@ export default function Hero() {
 
       {/* Deko */}
       {/* Rentiere: klein oben rechts, über dem Titel (Handy) bzw. rechts oben (Desktop) */}
-      <Deco name="reindeer" className="-right-3 -top-4 w-24 opacity-95 sm:-right-2 sm:top-0 sm:w-48 lg:right-[3%] lg:w-60" />
+      <Deco name="reindeer" className="-right-3 -top-4 w-24 opacity-95 sm:-right-2 sm:top-0 sm:w-48 md:w-32 lg:right-[3%] lg:w-60" />
       {/* Bär mit Ballons: nur Desktop seitlich, am Handy sitzt er neben dem Buch */}
-      <Deco name="balloonBear" className="left-[3%] top-[42%] hidden w-40 animate-float lg:block xl:w-56" />
+      <Deco name="balloonBear" className="left-[18%] top-[62%] hidden w-40 animate-rise-and-float-desktop max-[1700px]:left-[8%] lg:block xl:w-56" />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-5 pb-0 pt-6 text-center sm:pt-10">
         {/* Logo / Titel: Bild hat viel Rand, daher breiter als der Bildschirm skaliert */}
@@ -32,27 +32,33 @@ export default function Hero() {
           Das Adventskalenderbuch – 24 Geschichten und Rätsel
         </p>
 
-        <h2 className="mt-8 text-2xl font-semibold leading-snug text-snow sm:text-4xl">
+        <h2 className="mt-6 text-2xl font-semibold leading-snug text-snow sm:text-4xl">
           Die sinnvolle Adventszeit für dein Kind ✨
         </h2>
-        <p className="mt-3 max-w-xl text-base leading-relaxed text-snow-200 sm:text-lg">
+        <p className="mt-3 mb-4 max-w-xl text-base leading-relaxed text-snow-200 sm:text-lg">
           24 Türchen voller Magie, Rätselspaß und gemeinsamer Momente – statt Zucker
           gibt es Staunen, Lachen und leuchtende Kinderaugen.
         </p>
 
         {/* 3D-Mockup Platzhalter */}
         <div className="relative mt-6 w-64 sm:w-80">
-          {/* Handy/Tablet: Ballonbär eigenständig animiert, unabhängig vom Buch, weiter oben */}
-          <Deco name="balloonBear" className="-left-14 bottom-[45%] w-20 animate-float sm:-left-24 sm:w-28 lg:hidden" />
+          {/* Handy/Tablet: Ballonbär startet beim CTA-Button und wandert linear nach oben zum Buch */}
+          <Deco name="balloonBear" className="-left-16 -bottom-14 w-24 animate-rise-and-float sm:-left-24 sm:w-28 lg:hidden" />
+          {/* Altersempfehlung oben rechts neben dem Buch – gleiche Animation wie der Ballonbär */}
+          <Deco
+            name="altersempfehlung"
+            className="-right-20 -top-4 z-10 w-24 animate-float-slow opacity-88 drop-shadow-[0_6px_14px_rgba(0,0,0,0.4)] sm:-right-28 sm:-top-10 sm:w-32 lg:-right-48 lg:w-36 lg:top-2"
+          />
           {/* Buch: eigene, etwas flachere Schwebe-Animation */}
           <div className="relative animate-float-soft">
+            
             {/* "Made in Germany" Sticker rechts unten am Buch */}
             <Image
               src="/images/made-in-germany-icon.png"
               alt="Made in Germany"
               width={1920}
               height={1920}
-              className="absolute -bottom-3 -right-5 z-10 h-[84px] w-[84px] rotate-[12deg] drop-shadow-[0_6px_14px_rgba(0,0,0,0.4)] sm:-bottom-4 sm:-right-8 sm:h-28 sm:w-28"
+              className="absolute -bottom-3 -right-5 z-10 h-[84px] w-[84px] rotate-[12deg] opacity-90 drop-shadow-[0_6px_14px_rgba(0,0,0,0.4)] sm:-bottom-4 sm:-right-8 sm:h-28 sm:w-28"
             />
             <Image
               src="/images/buch_bild1.png"
@@ -61,7 +67,7 @@ export default function Hero() {
               height={1190}
               priority
               sizes="(max-width: 640px) 256px, 320px"
-              className="h-auto w-full drop-shadow-[0_25px_35px_rgba(0,0,0,0.5)]"
+              className="h-auto w-full animate-book-glow"
             />
           </div>
         </div>

@@ -76,8 +76,8 @@ export default function Benefits() {
 
   return (
     <section className="relative -mt-px overflow-hidden bg-[#79c4d0] text-night-900">
-      <Deco name="trees" className="bottom-0 right-0 w-28 sm:w-72" />
-      <Deco name="birds" className="left-0 top-24 sm:top-20 w-16 sm:w-32" />
+      <Deco name="trees" className="bottom-10 right-0 w-28 sm:w-72" />
+      <Deco name="birds" className="left-0 top-24 w-16 sm:top-20 sm:w-28 md:w-32 lg:w-40 xl:w-48 2xl:w-64" />
       <div className="section relative">
         <h2 className="section-title text-night-800">Warum Mütter dieses Buch lieben 💙</h2>
 

@@ -72,7 +72,11 @@ export default function BookPreview() {
   };
 
   const next = () => {
-    if (active === 0) {
+    // Auf Mobile zuerst auf Seite 2 scrollen; auf Desktop ist das ganze Kapitel sichtbar
+    const isMobile =
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 639px)").matches;
+    if (isMobile && active === 0) {
       goTo(1);
       return;
     }
@@ -185,7 +189,7 @@ export default function BookPreview() {
   return (
     <section className="relative overflow-hidden bg-night-900">
       <Deco name="walk" className="bottom-1 left-2 w-16 sm:bottom-auto sm:left-6 sm:top-0 sm:w-40" />
-      <div className="section relative sm:py-10">
+      <div className="section relative sm:py-10 lg:max-w-6xl xl:max-w-7xl">
         <h2 className="section-title sm:text-3xl">Wirf einen Blick ins Buch 👀</h2>
         <p className="mx-auto mt-3 max-w-xl text-center text-snow-200 sm:mt-2">
           Ein echtes Beispielkapitel: Erst die Geschichte, dann das passende Rätsel.{" "}
@@ -218,7 +222,7 @@ export default function BookPreview() {
               <img
                 src={current.src}
                 alt={current.alt}
-                className={`block h-auto w-full select-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)] transition-opacity duration-200 sm:max-h-[55vh] sm:w-auto sm:max-w-full ${
+                className={`block h-auto w-full select-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)] transition-opacity duration-200 sm:max-h-[55vh] sm:w-auto sm:max-w-full lg:max-h-[65vh] xl:max-h-[72vh] 2xl:max-h-[78vh] ${
                   loaded[current.src] ? "opacity-100" : "opacity-0"
                 }`}
                 draggable={false}
@@ -236,48 +240,70 @@ export default function BookPreview() {
               currentPage % 2 === 0 ? "opacity-100" : "opacity-0"
             }`}
           >
-            Wische für Seite 2 👉
+            Wische für die Nächste Seite 👉
           </div>
 
-          {/* Zurück-Button (unten links): nur auf Seite 1 eines Kapitels, wenn es ein vorheriges Kapitel gibt */}
-          {currentPage % 2 === 0 && previewIndex > 0 && (
+          {/* Zurück-Button (unten links): Mobile nur auf Seite 1 eines Kapitels, Desktop immer wenn es ein vorheriges Kapitel gibt */}
+          {previewIndex > 0 && (
             <button
               type="button"
               onClick={prev}
               aria-label="Vorheriges Beispielkapitel"
-              className="absolute bottom-3 left-3 z-10 inline-flex items-center gap-1 rounded-full bg-night-950/85 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition hover:bg-night-950 active:scale-95"
+              className={`absolute bottom-3 left-3 z-10 inline-flex items-center gap-1 rounded-full bg-night-950/85 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition hover:bg-night-950 active:scale-95 ${
+                currentPage % 2 === 0 ? "" : "hidden sm:inline-flex"
+              }`}
             >
               ‹ Zurück
             </button>
           )}
 
-          {/* Nächstes-Button (unten rechts), sobald man auf Seite 2 ist und es weitere Previews gibt */}
-          {currentPage % 2 === 1 && !isLast && (
+          {/* Nächstes-Button (unten rechts): Mobile nur auf Seite 2, Desktop immer wenn es ein weiteres Kapitel gibt */}
+          {previewIndex < PREVIEWS.length - 1 && (
             <button
               type="button"
               onClick={next}
               aria-label="Nächstes Beispielkapitel"
-              className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-hut px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-hut-600 active:scale-95"
+              className={`absolute bottom-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-hut px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-hut-600 active:scale-95 ${
+                currentPage % 2 === 1 ? "" : "hidden sm:inline-flex"
+              }`}
             >
               Nächstes ›
             </button>
           )}
         </div>
 
-        {/* Fortschritts-Punkte über alle Seiten hinweg */}
+        {/* Fortschritts-Punkte: Mobile pro Seite, Desktop pro Kapitel */}
         <div className="mt-3 flex justify-center gap-1">
+          {/* Mobile: alle Seiten */}
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
-              key={i}
+              key={`m-${i}`}
               type="button"
               aria-label={`Seite ${i + 1} von ${totalPages}`}
               aria-current={i === currentPage ? "page" : undefined}
               onClick={() => goToPage(i)}
-              className="flex h-8 w-8 items-center justify-center"
+              className="flex h-8 w-8 items-center justify-center sm:hidden"
             >
               <span
                 className={`h-2.5 rounded-full transition-all ${
                   i === currentPage ? "w-6 bg-mint" : "w-2.5 bg-snow/40"
+                }`}
+              />
+            </button>
+          ))}
+          {/* Desktop: ein Punkt pro Kapitel */}
+          {PREVIEWS.map((_, i) => (
+            <button
+              key={`d-${i}`}
+              type="button"
+              aria-label={`Kapitel ${i + 1} von ${PREVIEWS.length}`}
+              aria-current={i === previewIndex ? "page" : undefined}
+              onClick={() => goToPage(i * 2)}
+              className="hidden h-8 w-8 items-center justify-center sm:flex"
+            >
+              <span
+                className={`h-2.5 rounded-full transition-all ${
+                  i === previewIndex ? "w-6 bg-mint" : "w-2.5 bg-snow/40"
                 }`}
               />
             </button>

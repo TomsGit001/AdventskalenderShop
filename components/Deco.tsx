@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export type DecoName =
   | "walk" | "sleep" | "honey" | "balloons3" | "dance" | "question"
-  | "balloonBear" | "reindeer"
+  | "balloonBear" | "reindeer" | "altersempfehlung"
   | "birds" | "trees" | "raven" | "house";
 
 // Dateien liegen in /public/images (Seitenverhältnis ca. 4:5)
@@ -15,6 +15,7 @@ const FILES: Record<DecoName, string> = {
   question: "icons_benny_frage.png",
   balloonBear: "icon2.png",
   reindeer: "icon3.png",
+  altersempfehlung: "altersempfehlung.png",
   birds: "icon4.png",
   trees: "icon4.png",
   raven: "icon5.png",
