@@ -22,7 +22,7 @@ const BENEFITS: { emoji: string; title: string; text: string }[] = [
 
 export default function ProductDetails() {
   return (
-    <section className="relative overflow-hidden bg-cornsilk text-night-900">
+    <section className="relative overflow-hidden bg-sky-100 text-night-900">
       {/* Welliger Übergang oben */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 leading-none">
         <svg
@@ -92,7 +92,7 @@ export default function ProductDetails() {
               {BENEFITS.map((b) => (
                 <li
                   key={b.title}
-                  className="flex gap-3 rounded-2xl bg-cornsilk p-4 shadow-sm ring-1 ring-night-900/5"
+                  className="flex gap-3 rounded-2xl bg-white/70 p-4 shadow-sm ring-1 ring-night-900/5"
                 >
                   <span aria-hidden className="text-2xl leading-none">
                     {b.emoji}
