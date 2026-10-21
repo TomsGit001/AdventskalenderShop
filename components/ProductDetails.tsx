@@ -23,23 +23,9 @@ const BENEFITS: { emoji: string; title: string; text: string }[] = [
 export default function ProductDetails() {
   return (
     <section className="relative overflow-hidden bg-[#67bed9] text-night-900">
-      {/* Welliger Übergang oben */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 leading-none">
-        <svg
-          viewBox="0 0 1440 80"
-          preserveAspectRatio="none"
-          className="block h-10 w-full text-snow sm:h-16"
-        >
-          <path
-            fill="currentColor"
-            d="M0,0 L1440,0 L1440,40 C1200,80 960,0 720,40 C480,80 240,0 0,40 Z"
-          />
-        </svg>
-      </div>
-
       <Deco name="house" className="bottom-0 left-0 w-28 sm:w-64" />
       <Deco name="raven" className="right-2 top-2 w-16 sm:right-8 sm:top-4 sm:w-28" />
-      <div className="section relative pt-16 sm:pt-24">
+      <div className="section relative">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
           {/* Autorenfoto */}
           <div className="relative mx-auto w-full max-w-sm md:max-w-none">
@@ -115,20 +101,6 @@ export default function ProductDetails() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Welliger Übergang unten */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 leading-none">
-        <svg
-          viewBox="0 0 1440 80"
-          preserveAspectRatio="none"
-          className="block h-10 w-full text-snow sm:h-16"
-        >
-          <path
-            fill="currentColor"
-            d="M0,80 L1440,80 L1440,40 C1200,0 960,80 720,40 C480,0 240,80 0,40 Z"
-          />
-        </svg>
       </div>
     </section>
   );
