@@ -12,13 +12,13 @@ const INITIAL_REVIEWS: Review[] = [
   {
     quote:
       "Das Buch ist super ! endlich ein Adventskalender, der nicht nur die Augen, sondern auch den Geist beschäftigt :) Mein Sohn fragt immer, wann wir das nächste Türchen lesen können.",
-    name: "Viktoria, Mama von Lucia (6)",
+    name: "Viktoria, Mama von einem Mädchen (6)",
     rating: 5,
   },
   {
     quote:
       " Ich kenne das Buch noch vom letzten Jahr. Endlich ein Adventskalender, bei dem ich mich nicht über Zucker nachdenken muss. Die Rätsel sind genau richtig eingestuft. Es fördert defnitiv das logische Denken.",
-    name: "Sandra, Mama von Mia (7)",
+    name: "Sandra, ich bin die Mama von Mia (7)",
     rating: 5,
   },
   {
@@ -29,31 +29,31 @@ const INITIAL_REVIEWS: Review[] = [
   },
   {
     quote:
-      "Ich war erst skeptisch, ob ein Rätsel Adventskalender bei meiner Tochter ankommt – aber sie ist absolut begeistert! Jeden Morgen ist der erste Weg direkt zum Buch. Perfekte Mischung aus Spannung und Weihnachtsstimmung.",
+      "Ich war erst skeptisch, ob ein Rätsel Adventskalender bei meiner Tochter ankommt – aber sie ist absolut begeistert!? Jeden Morgen ist der erste Weg direkt zum Buch. Perfekte Mischung aus Spannung und Weihnachtsstimmung.",
     name: "Sarah, Mama von Mia (7)",
     rating: 5,
   },
   {
     quote:
-      "Als Papa freue ich mich riesig über die gemeinsame Zeit beim Rätseln. Keine Schokolade, dafür echte Vorfreude und tolle Gespräche jeden Abend vor dem Einschlafen. Eine klare Empfehlung für die Adventszeit!",
-    name: "Raoul, Papa von Marco (8)",
+      "Hallo, als Papa freue ich mich riesig über die gemeinsame Zeit beim Rätseln... Keine Schokolade, dafür echte Vorfreude und tolle Gespräche jeden Abend vor dem Einschlafen. Eine klare Empfehlung für die Adventszeit!",
+    name: "Raoul, 36 Jahre alt",
     rating: 5,
   },
   {
     quote:
-      "Ich habe das Buch meinem Neffen geschenkt und meine Schwester sagt es ist es das absolute Highlight im Dezember. Die Rätsel sind genau richtig knifflig und superschön gestalte t. Nächstes Jahr definitiv wieder!",
-    name: "Sabine, Tante von Jonas (6)",
+      "Ich habe das Buch meinem Neffen geschenkt und meine Schwester sagt, es ist es das absolute Highlight im Dezember. Die Rätsel sind genau richtig knifflig und superschön gestalte t. Nächstes Jahr definitiv wieder!",
+    name: "Sabine, Tante von Jonas, der 6 ist.",
     rating: 5,
   },
   {
-    quote: "Ein Stern abzug aufgrund des Versands, das Buch brauchte 3 Tage bis es ankam. Zum Glück aber noch vor dem 1. Dezember. Inhaltlich aber top, meine Tochter liebt es! Auch schöne Illustrationen.",
-    name: "Silke, Mama von Mia (7)",
+    quote: "Ein Stern abzug aufgrund des Versands, das Buch brauchte ganze 3 Tage bis es ankam. Zum Glück aber noch vor dem 1. Dezember. Inhaltlich aber top, meine Tochter liebt es! Auch schöne Illustrationen.",
+    name: "Silke , Mama von Mia (7)",
     rating: 4,
   },
   {
     quote:
       "Endlich mal kein billiges Plastikspielzeug, das nach zwei Tagen in der Ecke liegt. Meine zwei Mädels knobeln jeden Tag zusammen und können es kaum erwarten, wie die Geschichte weitergeht. Einfach wundervoll gemacht!",
-    name: "Maren, Mama von Emma (5) & Maria (8)",
+    name: "Mein Name istMaren, Mama von Emma (5) u. Maria (8)",
     rating: 5,
   },
   {
@@ -64,20 +64,20 @@ const INITIAL_REVIEWS: Review[] = [
   },
   {
     quote:
-      "Wir haben das Buch letztes Jahr von der Tante geschenkt bekommen und mussten es dieses Jahr direkt wieder bestellen. Es ist mittlerweile unsere liebste Familientradition im Dezember geworden!",
-    name: "Laura, Mama von Noah (7)",
+      "Wir haben dieses Buch letztes Jahr  von der Tante geschenkt bekommen und mussten es dieses Jahr direkt wieder bestellen. Jetzt kann ich endlich hier eine Bewertug abgeben. Es ist mittlerweile unsere liebste Familientradition im Dezember geworden!",
+    name: "Laura , Mama von meinem Liebling (7)",
     rating: 5,
   },
   {
     quote:
-      "Die Illustrationen sind so liebevoll gemacht, dass meine Tochter abends oft noch eine Seite länger im Bett bleiben darf, um sie sich anzusehen. Und das Rätsel am nächsten Morgen ist dann das Highlight.",
+      "Die Illustrationen sind so liebevoll gemacht, dass meine Tochter abends oft noch eine Seite länger im Bett bleiben darf, um sie sich anzusehen. Und das Rätsel am nächsten Morgen ist dann das Highlight. Love it!",
     name: "Julia, Mama von Leni (6)",
     rating: 5,
   },
   {
     quote:
-      "Wir haben das Buch für unsere Enkelin gekauft und sind begeistert. Es ist schön, dass es mal etwas ohne Zucker ist, das die Kinder trotzdem jeden Tag freudig öffnen. Die Rätsel sind altersgerecht und machen auch uns Großeltern Spaß.",
-    name: "Renate, Oma von Sophie (7)",
+      "Wir haben das Buch für unsere Enkelin gekauft und sind begeistert, omg. Es ist schön, dass es mal etwas ohne Zucker ist, das die Kinder trotzdem jeden Tag freudig öffnen. Die Rätsel sind altersgerecht und machen auch uns Großeltern Spaß.",
+    name: "Ich bin Renate, Oma von Sophie (7)",
     rating: 5,
   },
   {
@@ -125,18 +125,18 @@ const INITIAL_REVIEWS: Review[] = [
   {
     quote:
       "Mein Sohn hat das Buch von seiner Oma bekommen und wir sind alle begeistert. Die Rätsel sind nicht zu leicht, aber auch nicht zu schwer – genau die richtige Mischung. Er ist jedes Mal stolz, wenn er es alleine löst.",
-    name: "Katrin, Mama von Felix (8)",
+    name: "Katrin, die Mama von Felix (8)",
     rating: 5,
   },
   {
     quote:
       "Wir haben das Buch letztes Jahr verschenkt und dieses Jahr gleich zwei bestellt. Es ist einfach ein schönes Geschenk, das nicht in der Ecke landet, sondern jeden Tag Freude bringt. Klare Kaufempfehlung!",
-    name: "Stefan, Papa von Marie (6)",
+    name: "Stefan, Papa von der Marie (6)",
     rating: 5,
   },
   {
     quote:
-      "Meine Tochter ist ein großer Fan von Rätseln und dieses Buch hat sie voll getroffen. Sie hat sogar angefangen, die Geschichten ihren Puppen vorzulesen. Das ist für uns das schönste Kompliment.",
+      "Meine Tochtr ist ein großer Fan von Rätseln und dieses Buch hat sie voll getroffen. Sie hat sogar angefangen, die Geschichten ihren Puppen vorzulesen. Das ist für uns das schönste Kompliment.",
     name: "Birgit, Mama von Johanna (7)",
     rating: 5,
   },
@@ -149,7 +149,7 @@ const INITIAL_REVIEWS: Review[] = [
   {
     quote:
       "Das Buch ist bei uns der Renner. Mein Sohn hat es sogar mit in die Schule genommen, um es seinem Freund zu zeigen. Die beiden knobeln jetzt jeden Tag zusammen. So etwas habe ich bei einem Adventskalender noch nie erlebt.",
-    name: "Andreas, Papa von Ben (8)",
+    name: "Andreas, Papa von dem lieben Ben (8)",
     rating: 5,
   },
   {
@@ -161,19 +161,19 @@ const INITIAL_REVIEWS: Review[] = [
   {
     quote:
       "Die Geschichten sind so schön geschrieben, dass ich beim Vorlesen selbst Gänsehaut bekomme. Und die Rätsel sind der perfekte Abschluss für jeden Tag. Wir freuen uns schon auf den nächsten Advent mit Benny!",
-    name: "Tobias, Papa von Emil (6)",
+    name: "Tobias, Papa vom Emil (6)",
     rating: 5,
   },
   {
     quote:
       "Meine Tochter hat das Buch von ihrer Freundin empfohlen bekommen und wir haben es direkt bestellt. Es hat unsere Erwartungen übertroffen. Die Qualität ist super und der Inhalt ist wirklich durchdacht.",
-    name: "Verena, Mama von Mia (7)",
+    name: "Verena, Mama von der Mia (7)",
     rating: 5,
   },
   {
     quote:
       "Wir haben das Buch für unsere beiden Jungs gekauft und es ist jeden Morgen ein kleines Fest. Sie streiten sich sogar darum, wer das Türchen öffnen darf. Das ist ein Luxusproblem, das wir gerne haben!",
-    name: "Frank, Papa von Leon & Finn (7 & 9)",
+    name: "Frank, Papa von Leon & Finn (7 & 9 Jahre)",
     rating: 5,
   },
   {
