@@ -13,7 +13,7 @@ export default function Datenschutz() {
         Der Schutz deiner persönlichen Daten ist uns wichtig. Hier erfährst du, welche Daten beim
         Besuch dieser Website und bei einer Bestellung verarbeitet werden, zu welchen Zwecken und auf
         welcher Rechtsgrundlage das geschieht und welche Rechte du hast. Diese Erklärung gilt für
-        den Online-Shop „Bennys Winterrätsel“ unter bennys-winterrätsel.store. Personenbezogene Daten sind alle
+        den Online-Shop „Bennys Winterrätsel“ unter bennys-winterraetsel.de. Personenbezogene Daten sind alle
         Daten, mit denen du persönlich identifiziert werden kannst.
       </p>
 
