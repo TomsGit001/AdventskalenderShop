@@ -8,6 +8,7 @@ import {
   PRODUCT_PRICE_CENTS,
   SHIPPING_CENTS,
   SHIPPING_COUNTRIES,
+  SITE_URL,
 } from "@/lib/config";
 
 export const dynamic = "force-dynamic";
@@ -18,7 +19,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "STRIPE_SECRET_KEY fehlt" }, { status: 500 });
   }
 
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || new URL(req.url).origin).replace(/\/$/, "");
+  // In lokaler Entwicklung den tatsächlichen Origin verwenden, in Produktion immer die
+  // kanonische Domain – unabhängig davon, was NEXT_PUBLIC_SITE_URL enthält.
+  const isLocal = new URL(req.url).hostname === "localhost";
+  const siteUrl = (isLocal ? new URL(req.url).origin : SITE_URL).replace(/\/$/, "");
 
   const p = new URLSearchParams();
   p.set("mode", "payment");

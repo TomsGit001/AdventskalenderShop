@@ -1,5 +1,10 @@
 export const CTA_LABEL = "Jetzt Exemplar sichern";
 
+// Kanonische Produktions-Domain – wird u. a. für Stripe-Redirects (success_url/cancel_url)
+// und für metadataBase genutzt. Bewusst hart kodiert, damit eine falsch gesetzte
+// Env-Variable nicht zu Redirects auf eine andere Domain (z. B. .store) führt.
+export const SITE_URL = "https://bennys-winterraetsel.de";
+
 // Stripe-Produktdaten (Preis in Cent – bitte anpassen!)
 export const PRODUCT_NAME = "Bennys Winterrätsel – Das Adventskalenderbuch";
 export const PRODUCT_DESCRIPTION = "24 Geschichten & Rätsel für einen magischen Advent";
