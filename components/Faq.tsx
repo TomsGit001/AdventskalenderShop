@@ -18,8 +18,25 @@ const FAQS = [
   { q: "Kann ich mehrere Exemplare bestellen?", a: "Ja, du kannst direkt im Checkout die gewünschte Anzahl auswählen – ideal, wenn du mehrere Kinder beschenken möchtest." },
 ];
 
+const INITIAL_VISIBLE = 4;
+const STEP = 6;
+
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+
+  const allVisible = visibleCount >= FAQS.length;
+  const shownFaqs = FAQS.slice(0, visibleCount);
+
+  const toggleMore = () => {
+    if (allVisible) {
+      setVisibleCount(INITIAL_VISIBLE);
+      // Falls ein jetzt ausgeblendetes FAQ offen war, dieses schließen
+      setOpen((prev) => (prev !== null && prev >= INITIAL_VISIBLE ? null : prev));
+    } else {
+      setVisibleCount((c) => Math.min(c + STEP, FAQS.length));
+    }
+  };
 
   return (
     <section className="relative overflow-hidden bg-night-800">
@@ -27,7 +44,7 @@ export default function Faq() {
       <div className="section relative max-w-3xl">
         <h2 className="section-title">Häufige Fragen</h2>
         <div className="mt-8 space-y-3">
-          {FAQS.map((f, i) => {
+          {shownFaqs.map((f, i) => {
             const isOpen = open === i;
             return (
               <div key={f.q} className="overflow-hidden rounded-2xl bg-cornsilk text-night-900">
@@ -51,6 +68,25 @@ export default function Faq() {
             );
           })}
         </div>
+
+        {FAQS.length > INITIAL_VISIBLE && (
+          <div className="mt-6 text-center">
+            <button
+              type="button"
+              onClick={toggleMore}
+              aria-expanded={allVisible}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-cornsilk/70 px-6 py-3 font-display font-semibold text-cornsilk transition hover:bg-cornsilk hover:text-night-900"
+            >
+              {allVisible ? "Weniger anzeigen" : "Weitere Fragen anzeigen"}
+              <span
+                className={`text-xl leading-none transition-transform ${allVisible ? "rotate-45" : ""}`}
+                aria-hidden
+              >
+                +
+              </span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
