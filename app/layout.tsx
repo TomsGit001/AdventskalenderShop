@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: "Bennys Winterrätsel – Das Adventskalenderbuch | 24 Geschichten & Rätsel",
   description:
     "Die sinnvolle Alternative zum Schoko-Adventskalender: 24 Geschichten und Rätsel, die Konzentration und Logik fördern.",
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
 };
 
 export const viewport: Viewport = {
