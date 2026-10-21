@@ -187,7 +187,7 @@ export default function BookPreview() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-night-900">
+    <section id="book-preview" className="relative overflow-hidden bg-night-900 scroll-mt-4">
       <Deco name="walk" className="bottom-1 left-2 w-16 sm:bottom-auto sm:left-6 sm:top-0 sm:w-40" />
       <div className="section relative sm:py-10 lg:max-w-6xl xl:max-w-7xl">
         <h2 className="section-title sm:text-3xl">Wirf einen Blick ins Buch 👀</h2>

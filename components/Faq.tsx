@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { Deco } from "./Deco";
 
-const FAQS = [
+type Faq = { q: string; a: string; cta?: { label: string; targetId: string } };
+
+const FAQS: Faq[] = [
   { q: "Für welches Alter ist das Buch geeignet?", a: "Das Buch eignet sich für Kinder von ca. 6 bis 7 Jahren. Jüngere Kinder genießen die Geschichten, ältere rätseln mehr mit." },
   { q: "Wie funktioniert der Adventskalender?", a: "Ab dem 1. Dezember lest ihr jeden Tag ein Kapitel und löst gemeinsam oder alleine das passende Rätsel – 24 Tage bis Heiligabend." },
   { q: "Wie läuft Bestellung und Lieferung ab?", a: "Die Bestellung erfolgt sicher über unseren Zahlungsanbieter Stripe. Nach dem Kauf erhältst du alle Infos zur Lieferung per E-Mail." },
@@ -12,7 +14,11 @@ const FAQS = [
   { q: "Was kostet der Versand?", a: "Der Versand innerhalb Deutschlands ist kostenlos. Für Lieferungen nach Österreich und in die Schweiz können zusätzliche Versandkosten anfallen." },
   { q: "Welche Zahlungsmöglichkeiten gibt es?", a: "Die Bezahlung erfolgt sicher über unseren Zahlungsanbieter Stripe. Dort kannst du bequem per Kreditkarte, SEPA-Lastschrift oder weiteren gängigen Methoden bezahlen." },
   { q: "Kann ich das Buch zurückgeben?", a: "Ja, es gilt das gesetzliche Widerrufsrecht von 14 Tagen. Die genauen Bedingungen findest du in unserer Widerrufsbelehrung." },
-  { q: "Ist das Buch auch für jüngere Kinder geeignet?", a: "Die Geschichten eignen sich bereits für Kinder ab etwa 4 Jahren zum Vorlesen. Die Rätsel sind für Kinder ab ca. 6 Jahren konzipiert. Dabei handelt es sich allerdings um eine Einschätzung. Am Besten machst du dir durch dein Bucheinblick ein eigenes Bild. Die farbigen Nüsse in der oberen rechten Buchecke beschreiben die Schwierigkeit des Rätsels von 1 bis 3." },
+  {
+    q: "Ist das Buch auch für jüngere Kinder geeignet?",
+    a: "Die Geschichten eignen sich bereits für Kinder ab etwa 4 Jahren zum Vorlesen. Die Rätsel sind für Kinder ab ca. 6 Jahren konzipiert. Dabei handelt es sich allerdings um eine Einschätzung. Am Besten machst du dir durch dein Bucheinblick ein eigenes Bild. Die farbigen Nüsse in der oberen rechten Buchecke beschreiben die Schwierigkeit des Rätsels von 1 bis 3.",
+    cta: { label: "Zum Bucheinblick", targetId: "book-preview" },
+  },
   { q: "In welcher Sprache ist das Buch?", a: "Das Buch ist komplett auf Deutsch – sowohl die Geschichten als auch die Rätsel und Illustrationen." },
   { q: "Wie viele Seiten hat das Buch?", a: "Das Buch umfasst 24 Kapitel mit liebevollen Illustrationen. Genaue Angaben zu Seitenzahl und Format findest du in den Produktdetails." },
   { q: "Kann ich mehrere Exemplare bestellen?", a: "Ja, du kannst direkt im Checkout die gewünschte Anzahl auswählen – ideal, wenn du mehrere Kinder beschenken möchtest." },
@@ -62,6 +68,21 @@ export default function Faq() {
                 <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                   <div className="overflow-hidden">
                     <p className="px-5 pb-5 leading-relaxed text-night-700">{f.a}</p>
+                    {f.cta && (
+                      <div className="px-5 pb-5">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const el = document.getElementById(f.cta!.targetId);
+                            el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                          }}
+                          className="inline-flex items-center gap-2 rounded-full bg-hut px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-hut-600 active:scale-95"
+                        >
+                          {f.cta.label}
+                          <span aria-hidden>↓</span>
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
