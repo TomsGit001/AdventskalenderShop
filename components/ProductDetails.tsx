@@ -31,7 +31,7 @@ export default function ProductDetails() {
           <div className="relative mx-auto w-full max-w-sm md:max-w-none">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-night-100 shadow-xl ring-1 ring-night-900/5">
               <Image
-                src="/images/tom.jpg"
+                src="/images/profilbild.jpg"
                 alt="Tom, Autor von Bennys Winterrätsel"
                 fill
                 sizes="(min-width: 768px) 40vw, 90vw"
