@@ -76,7 +76,7 @@ export default function Faq() {
                             const el = document.getElementById(f.cta!.targetId);
                             el?.scrollIntoView({ behavior: "smooth", block: "start" });
                           }}
-                          className="inline-flex items-center gap-2 rounded-full bg-hut px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-hut-600 active:scale-95"
+                          className="inline-flex items-center gap-2 rounded-full bg-[#C9B79C] px-5 py-2.5 text-sm font-semibold text-night-900 transition hover:bg-[#B8A588] active:scale-95"
                         >
                           {f.cta.label}
                           <span aria-hidden>↑</span>
