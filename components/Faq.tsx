@@ -8,6 +8,14 @@ const FAQS = [
   { q: "Wie funktioniert der Adventskalender?", a: "Ab dem 1. Dezember lest ihr jeden Tag ein Kapitel und löst gemeinsam oder alleine das passende Rätsel – 24 Tage bis Heiligabend." },
   { q: "Wie läuft Bestellung und Lieferung ab?", a: "Die Bestellung erfolgt sicher über unseren Zahlungsanbieter Stripe. Nach dem Kauf erhältst du alle Infos zur Lieferung per E-Mail." },
   { q: "Kann ich das Buch verschenken?", a: "Ja! Das Buch ist ein wunderbares Geschenk für Kinder, Enkel, Nichten und Neffen." },
+  { q: "Wie lange dauert die Lieferung?", a: "Die Lieferung dauert in der Regel 2–5 Werktage innerhalb Deutschlands. Bestellungen bis Mitte November kommen sicher vor dem 1. Dezember an." },
+  { q: "Was kostet der Versand?", a: "Der Versand innerhalb Deutschlands ist kostenlos. Für Lieferungen nach Österreich und in die Schweiz können zusätzliche Versandkosten anfallen." },
+  { q: "Welche Zahlungsmöglichkeiten gibt es?", a: "Die Bezahlung erfolgt sicher über unseren Zahlungsanbieter Stripe. Dort kannst du bequem per Kreditkarte, SEPA-Lastschrift oder weiteren gängigen Methoden bezahlen." },
+  { q: "Kann ich das Buch zurückgeben?", a: "Ja, es gilt das gesetzliche Widerrufsrecht von 14 Tagen. Die genauen Bedingungen findest du in unserer Widerrufsbelehrung." },
+  { q: "Ist das Buch auch für jüngere Kinder geeignet?", a: "Die Geschichten eignen sich bereits für Kinder ab etwa 4 Jahren zum Vorlesen. Die Rätsel sind für Kinder ab ca. 6 Jahren konzipiert." },
+  { q: "In welcher Sprache ist das Buch?", a: "Das Buch ist komplett auf Deutsch – sowohl die Geschichten als auch die Rätsel und Illustrationen." },
+  { q: "Wie viele Seiten hat das Buch?", a: "Das Buch umfasst 24 Kapitel mit liebevollen Illustrationen. Genaue Angaben zu Seitenzahl und Format findest du in den Produktdetails." },
+  { q: "Kann ich mehrere Exemplare bestellen?", a: "Ja, du kannst direkt im Checkout die gewünschte Anzahl auswählen – ideal, wenn du mehrere Kinder beschenken möchtest." },
 ];
 
 export default function Faq() {
