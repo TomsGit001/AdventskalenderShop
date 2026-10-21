@@ -79,7 +79,7 @@ export default function Faq() {
                           className="inline-flex items-center gap-2 rounded-full bg-hut px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-hut-600 active:scale-95"
                         >
                           {f.cta.label}
-                          <span aria-hidden>↓</span>
+                          <span aria-hidden>↑</span>
                         </button>
                       </div>
                     )}
