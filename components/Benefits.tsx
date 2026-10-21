@@ -82,7 +82,7 @@ export default function Benefits() {
         <h2 className="section-title text-night-800">Warum Mütter dieses Buch lieben 💙</h2>
 
         <div className="mt-4 flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-night-800 shadow-sm ring-1 ring-night-900/10">
+          <span className="inline-flex items-center gap-2 rounded-full bg-cornsilk px-4 py-2 text-sm font-medium text-night-800 shadow-sm ring-1 ring-night-900/10">
             ⭐ 98% der Mütter empfehlen das Buch weiter
           </span>
         </div>
@@ -93,7 +93,7 @@ export default function Benefits() {
               key={b.title}
               data-benefit-card
               data-index={i}
-              className={`flex flex-col items-center rounded-3xl bg-white p-5 text-center ring-1 ring-night-900/5 transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-night-900/30 ${
+              className={`flex flex-col items-center rounded-3xl bg-cornsilk p-5 text-center ring-1 ring-night-900/5 transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-night-900/30 ${
                 visibleCards[i]
                   ? "translate-y-0 scale-100 opacity-100 shadow-2xl shadow-night-900/40 ring-night-900/10"
                   : "translate-y-8 scale-95 opacity-0 shadow-md"

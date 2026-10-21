@@ -22,7 +22,7 @@ export default function Faq() {
           {FAQS.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div key={f.q} className="overflow-hidden rounded-2xl bg-snow text-night-900">
+              <div key={f.q} className="overflow-hidden rounded-2xl bg-cornsilk text-night-900">
                 <h3>
                   <button
                     type="button"

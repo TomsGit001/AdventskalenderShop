@@ -11,6 +11,7 @@ const config: Config = {
         hut: { DEFAULT: "#D1423B", 600: "#B5322C", 700: "#96261F" },
         balloon: { blue: "#B8CCE6", sand: "#E8D5B5", rose: "#F4D6D0" },
         gold: { DEFAULT: "#F6AE4E", 600: "#E39221" },
+        cornsilk: { DEFAULT: "#FCF4D7" },
       },
       fontFamily: {
         display: ["var(--font-fredoka)", "system-ui", "sans-serif"],

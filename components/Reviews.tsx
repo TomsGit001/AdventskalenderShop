@@ -71,7 +71,7 @@ const INITIAL_REVIEWS: Review[] = [
 ];
 
 const field =
-  "w-full rounded-2xl border border-night-700/30 bg-white px-4 py-3 text-base text-night-900 placeholder:text-night-700/50 focus:border-hut focus:outline-none focus:ring-2 focus:ring-hut/30";
+  "w-full rounded-2xl border border-night-700/30 bg-cornsilk px-4 py-3 text-base text-night-900 placeholder:text-night-700/50 focus:border-hut focus:outline-none focus:ring-2 focus:ring-hut/30";
 
 function ReviewCard({ review }: { review: Review }) {
   const [expanded, setExpanded] = useState(false);
@@ -211,7 +211,7 @@ export default function Reviews() {
 
       <div
         ref={boxRef}
-        className={`mx-auto mt-8 max-w-4xl overflow-hidden rounded-3xl bg-white shadow-md ring-1 ring-night-900/5 transition-all duration-700 ease-out ${
+        className={`mx-auto mt-8 max-w-4xl overflow-hidden rounded-3xl bg-cornsilk shadow-md ring-1 ring-night-900/5 transition-all duration-700 ease-out ${
           visible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
         }`}
       >
