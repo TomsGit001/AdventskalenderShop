@@ -58,7 +58,7 @@ export default function Hero() {
               alt="Made in Germany"
               width={1920}
               height={1920}
-              className="absolute -bottom-3 -right-5 z-10 h-[84px] w-[84px] rotate-[12deg] opacity-90 drop-shadow-[0_6px_14px_rgba(0,0,0,0.4)] sm:-bottom-4 sm:-right-8 sm:h-28 sm:w-28"
+              className="absolute -bottom-3 -right-5 z-10 h-[84px] w-[84px] rotate-[12deg] opacity-86 drop-shadow-[0_6px_14px_rgba(0,0,0,0.4)] sm:-bottom-4 sm:-right-8 sm:h-28 sm:w-28"
             />
             <Image
               src="/images/buch_bild1.png"

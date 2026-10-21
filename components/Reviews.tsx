@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 type Review = { quote: string; name: string; rating: number };
 
@@ -72,6 +72,53 @@ const INITIAL_REVIEWS: Review[] = [
 
 const field =
   "w-full rounded-2xl border border-night-700/30 bg-white px-4 py-3 text-base text-night-900 placeholder:text-night-700/50 focus:border-hut focus:outline-none focus:ring-2 focus:ring-hut/30";
+
+function ReviewCard({ review }: { review: Review }) {
+  const [expanded, setExpanded] = useState(false);
+  const [clamped, setClamped] = useState(false);
+  const textRef = useRef<HTMLQuoteElement>(null);
+
+  useLayoutEffect(() => {
+    const el = textRef.current;
+    if (!el) return;
+    // Prüfen, ob der Text bei geklappter Ansicht abgeschnitten wird
+    const check = () => {
+      if (expanded) return;
+      setClamped(el.scrollHeight > el.clientHeight + 1);
+    };
+    check();
+    const ro = new ResizeObserver(check);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [expanded, review.quote]);
+
+  return (
+    <figure className="flex w-[85%] shrink-0 snap-start flex-col rounded-3xl bg-balloon-rose/50 p-5 shadow-sm sm:w-[calc(50%-0.5rem)]">
+      <Stars rating={review.rating} />
+      <blockquote
+        ref={textRef}
+        className={`mt-3 whitespace-pre-line break-words text-[16px] leading-relaxed text-night-900 ${
+          expanded ? "" : "line-clamp-4"
+        }`}
+      >
+        „{review.quote}“
+      </blockquote>
+      {(clamped || expanded) && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
+          className="mt-2 self-start text-sm font-semibold text-hut underline-offset-2 hover:underline"
+        >
+          {expanded ? "Weniger anzeigen" : "Mehr lesen"}
+        </button>
+      )}
+      <figcaption className="mt-auto pt-4 text-sm font-semibold text-night-700">
+        — {review.name}
+      </figcaption>
+    </figure>
+  );
+}
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -203,18 +250,7 @@ export default function Reviews() {
                   className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 [scrollbar-width:thin]"
                 >
                   {reviews.map((r, i) => (
-                    <figure
-                      key={`${r.name}-${i}`}
-                      className="flex w-[85%] shrink-0 snap-start flex-col rounded-3xl bg-balloon-rose/50 p-5 shadow-sm sm:w-[calc(50%-0.5rem)]"
-                    >
-                      <Stars rating={r.rating} />
-                      <blockquote className="mt-3 max-h-40 overflow-y-auto whitespace-pre-line break-words text-[16px] leading-relaxed text-night-900">
-                        „{r.quote}“
-                      </blockquote>
-                      <figcaption className="mt-auto pt-4 text-sm font-semibold text-night-700">
-                        — {r.name}
-                      </figcaption>
-                    </figure>
+                    <ReviewCard key={`${r.name}-${i}`} review={r} />
                   ))}
                 </div>
                 {reviews.length > 2 && (
