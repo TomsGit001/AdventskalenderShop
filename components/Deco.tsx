@@ -12,7 +12,7 @@ const FILES: Record<DecoName, string> = {
   honey: "icon_benny3.png",
   balloons3: "icon_benny4.png",
   dance: "icon_benny5.png",
-  question: "icons_benny_frage.png",
+  question: "icons_benny_Frage.png",
   balloonBear: "icon2.png",
   reindeer: "icon3.png",
   altersempfehlung: "altersempfehlung.png",
