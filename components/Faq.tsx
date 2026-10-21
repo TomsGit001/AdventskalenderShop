@@ -20,7 +20,7 @@ const FAQS: Faq[] = [
     cta: { label: "Zum Bucheinblick", targetId: "book-preview" },
   },
   { q: "In welcher Sprache ist das Buch?", a: "Das Buch ist komplett auf Deutsch – sowohl die Geschichten als auch die Rätsel und Illustrationen." },
-  { q: "Wie viele Seiten hat das Buch?", a: "Das Buch umfasst 24 Kapitel mit liebevollen Illustrationen. Genaue Angaben zu Seitenzahl und Format findest du in den Produktdetails." },
+  { q: "Wie viele Seiten hat das Buch?", a: "Das Buch umfasst 24 Kapitel mit liebevollen Illustrationen. Das Buch besteht hat 100 Seiten." },
   { q: "Kann ich mehrere Exemplare bestellen?", a: "Ja, du kannst direkt im Checkout die gewünschte Anzahl auswählen – ideal, wenn du mehrere Kinder beschenken möchtest." },
 ];
 
