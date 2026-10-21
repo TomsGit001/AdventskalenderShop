@@ -22,7 +22,7 @@ const BENEFITS: { emoji: string; title: string; text: string }[] = [
 
 export default function ProductDetails() {
   return (
-    <section className="relative overflow-hidden bg-sky-100 text-night-900">
+    <section className="relative overflow-hidden bg-[#67bed9] text-night-900">
       {/* Welliger Übergang oben */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 leading-none">
         <svg
