@@ -68,6 +68,138 @@ const INITIAL_REVIEWS: Review[] = [
     name: "Laura, Mama von Noah (7)",
     rating: 5,
   },
+  {
+    quote:
+      "Die Illustrationen sind so liebevoll gemacht, dass meine Tochter abends oft noch eine Seite länger im Bett bleiben darf, um sie sich anzusehen. Und das Rätsel am nächsten Morgen ist dann das Highlight.",
+    name: "Julia, Mama von Leni (6)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch für unsere Enkelin gekauft und sind begeistert. Es ist schön, dass es mal etwas ohne Zucker ist, das die Kinder trotzdem jeden Tag freudig öffnen. Die Rätsel sind altersgerecht und machen auch uns Großeltern Spaß.",
+    name: "Renate, Oma von Sophie (7)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Mein Sohn ist ein kleiner Zappelphilipp und tut sich mit stillsitzen schwer. Aber beim Rätseln ist er plötzlich ganz bei der Sache. Das Buch hat uns wirklich überrascht – absolute Empfehlung!",
+    name: "Daniel, Papa von Luis (6)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch für unsere Zwillinge gekauft und es funktioniert wunderbar. Jeder darf abwechselnd das Türchen öffnen, und beim Rätsel helfen sie sich gegenseitig. Das schweißt die beiden richtig zusammen.",
+    name: "Nadine, Mama von Paul & Pia (7)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Ich war auf der Suche nach einem Adventskalender, der nicht nach zwei Tagen vergessen ist. Dieses Buch ist es geworden – und was soll ich sagen, meine Tochter redet jetzt schon vom nächsten Jahr!",
+    name: "Anja, Mama von Clara (8)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Die Geschichten sind warmherzig und die Rätsel fordern genau richtig. Meine Tochter hat sogar angefangen, selbst kleine Rätsel für uns zu erfinden. Das Buch hat bei uns etwas in Gang gesetzt.",
+    name: "Petra, Mama von Hannah (9)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch als Geschenk für die Nichte gekauft und es kam super an. Die Verarbeitung ist hochwertig, die Seiten sind schön dick und die Farben leuchten richtig. Man merkt, dass hier Liebe im Detail steckt.",
+    name: "Michael, Onkel von Lea (6)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Meine Tochter hat das Buch von ihrer Patentante bekommen und wir sind beide hin und weg. Es ist so schön, dass es mal etwas ist, das man gemeinsam macht, statt dass das Kind alleine vor dem Kalender sitzt.",
+    name: "Christina, Mama von Amelie (7)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Ich habe das Buch für meine Klasse gekauft und lese jeden Morgen ein Türchen vor. Die Kinder sind jedes Mal mucksmäuschenstill und fiebern mit. Ein wunderbarer Start in den Schultag im Advent!",
+    name: "Frau Berger, Grundschullehrerin",
+    rating: 5,
+  },
+  {
+    quote:
+      "Mein Sohn hat das Buch von seiner Oma bekommen und wir sind alle begeistert. Die Rätsel sind nicht zu leicht, aber auch nicht zu schwer – genau die richtige Mischung. Er ist jedes Mal stolz, wenn er es alleine löst.",
+    name: "Katrin, Mama von Felix (8)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch letztes Jahr verschenkt und dieses Jahr gleich zwei bestellt. Es ist einfach ein schönes Geschenk, das nicht in der Ecke landet, sondern jeden Tag Freude bringt. Klare Kaufempfehlung!",
+    name: "Stefan, Papa von Marie (6)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Meine Tochter ist ein großer Fan von Rätseln und dieses Buch hat sie voll getroffen. Sie hat sogar angefangen, die Geschichten ihren Puppen vorzulesen. Das ist für uns das schönste Kompliment.",
+    name: "Birgit, Mama von Johanna (7)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Ich war erst unsicher, ob das Buch nicht zu anspruchsvoll für meine Kleine ist. Aber die Rätsel sind so liebevoll erklärt, dass sie fast alle alleine lösen kann. Und wenn nicht, machen wir es eben zusammen – auch schön!",
+    name: "Melanie, Mama von Ida (5)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Das Buch ist bei uns der Renner. Mein Sohn hat es sogar mit in die Schule genommen, um es seinem Freund zu zeigen. Die beiden knobeln jetzt jeden Tag zusammen. So etwas habe ich bei einem Adventskalender noch nie erlebt.",
+    name: "Andreas, Papa von Ben (8)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch für unsere Tochter gekauft, weil sie keine Schokolade mehr wollte. Sie hat sich das ausdrücklich gewünscht, und wir sind froh, dass wir so ein schönes Alternativprodukt gefunden haben. Sie liebt es!",
+    name: "Sandra, Mama von Nele (9)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Die Geschichten sind so schön geschrieben, dass ich beim Vorlesen selbst Gänsehaut bekomme. Und die Rätsel sind der perfekte Abschluss für jeden Tag. Wir freuen uns schon auf den nächsten Advent mit Benny!",
+    name: "Tobias, Papa von Emil (6)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Meine Tochter hat das Buch von ihrer Freundin empfohlen bekommen und wir haben es direkt bestellt. Es hat unsere Erwartungen übertroffen. Die Qualität ist super und der Inhalt ist wirklich durchdacht.",
+    name: "Verena, Mama von Mia (7)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch für unsere beiden Jungs gekauft und es ist jeden Morgen ein kleines Fest. Sie streiten sich sogar darum, wer das Türchen öffnen darf. Das ist ein Luxusproblem, das wir gerne haben!",
+    name: "Frank, Papa von Leon & Finn (7 & 9)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Ich habe das Buch für meine Enkelin gekauft und war skeptisch, ob sie sich für ein Buch begeistern kann. Aber sie liebt es! Sie ruft mich sogar an, um mir das Rätsel des Tages zu erzählen. Das ist so schön.",
+    name: "Helga, Oma von Emma (7)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Das Buch ist ein echter Schatz. Die Geschichten sind liebevoll und die Rätsel machen richtig Spaß. Meine Tochter hat es sogar mit in den Urlaub genommen, weil sie nicht darauf verzichten wollte. Klare Empfehlung!",
+    name: "Nicole, Mama von Sarah (8)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Wir haben das Buch als Geschenk für unsere Patenkinder gekauft und es kam super an. Die Eltern haben sich auch gefreut, weil es mal etwas anderes ist als Schokolade. Wir werden es nächstes Jahr wieder bestellen.",
+    name: "Ute, Patentante von Max (6)",
+    rating: 5,
+  },
+  {
+    quote:
+      "Mein Sohn hat das Buch von seiner Tante bekommen und wir sind alle begeistert. Es ist so schön, dass es mal etwas ist, das die ganze Familie zusammenbringt. Die Rätsel sind der Hit!",
+    name: "Claudia, Mama von Jonas (7)",
+    rating: 5,
+  },
 ];
 
 const field =
