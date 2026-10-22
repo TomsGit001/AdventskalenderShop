@@ -26,14 +26,10 @@ export async function POST(req: Request) {
 
   const p = new URLSearchParams();
   p.set("mode", "payment");
+  // Stripe rendert die Beschriftung der Haupt-Schaltfläche anhand von
+  // locale + submit_type. Mit locale "de" und submit_type "pay" zeigt Stripe
+  // "Jetzt kaufen" an.
   p.set("locale", "de");
-  // Hinweis: Der Text des Bezahl-Buttons ("Bezahlen") wird von Stripe gerendert
-  // und kann nur im Stripe-Dashboard unter Einstellungen → Checkout → Anpassen
-  // (Custom text / Branding) geändert werden – nicht über die Session-API.
-  // submit_type steuert nur die Art der Aktion ("pay" | "book" | "donate"),
-  // nicht die exakte Beschriftung. Stripe rendert den Button-Text anhand von
-  // locale + submit_type. Für "Jetzt kaufen" müsste der Text im Stripe-Dashboard
-  // unter Einstellungen → Checkout → Anpassen (Branding / Custom text) gesetzt werden.
   p.set("submit_type", "pay");
   p.set("success_url", `${siteUrl}/danke?session_id={CHECKOUT_SESSION_ID}`);
   p.set("cancel_url", `${siteUrl}/`);
@@ -78,9 +74,8 @@ export async function POST(req: Request) {
   // Rechtstexte im Checkout (Markdown-Links werden von Stripe unterstützt)
   p.set(
     "custom_text[submit][message]",
-    `Mit Klick auf „Bezahlen“ gibst du eine **zahlungspflichtige Bestellung** auf. Es gelten unsere [AGB](${siteUrl}/agb) und die [Widerrufsbelehrung](${siteUrl}/widerruf).`
+    `Mit Klick auf „Jetzt kaufen“ gibst du eine **zahlungspflichtige Bestellung** auf. Es gelten unsere [AGB](${siteUrl}/agb) und die [Widerrufsbelehrung](${siteUrl}/widerruf).`
   );
-  // Der Button-Text selbst ("Bezahlen") ist nicht per API änderbar – siehe Kommentar oben.
   p.set("custom_text[after_submit][message]", "Du erhältst deine Bestellbestätigung per E-Mail.");
 
   const res = await fetch("https://api.stripe.com/v1/checkout/sessions", {
