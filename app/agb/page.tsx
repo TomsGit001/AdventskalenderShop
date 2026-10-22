@@ -163,7 +163,7 @@ export default function Agb() {
       </p>
       <p className={p}>
         4.4 Die Zahlungsabwicklung erfolgt über Stripe. Die einzelnen über Stripe angebotenen
-        Zahlungsarten werden dem Kunden im Checkout mitgeteilt (aktivierte Zahlungsarten: Karten (Visa, Mastercard,  Wero, Revolut Pay, American Express, Discover, Diners Club, Cartes Bancaires, JCB und China UnionPay-Zahlungen), Amazon Pay, Apple Pay, Kakao Pay, Link (by Stripe), MB Way, Naver Pay, PAYCO, PayPal, Samsung Play, Satispay, Bancontact, BLIK, iDEAL Wero, Wero, Pix und Klarna).
+        Zahlungsarten werden dem Kunden im Checkout mitgeteilt (aktivierte Zahlungsarten: Karten (Visa, Mastercard,  Wero, Revolut Pay, American Express, Discover, Diners Club, Cartes Bancaires, JCB und China UnionPay-Zahlungen), Amazon Pay, Apple Pay, Google Pay, Kakao Pay, Link (by Stripe), MB Way, Naver Pay, PAYCO, PayPal, Samsung Play, Satispay, Bancontact, BLIK, iDEAL Wero, Wero, Pix und Klarna).
         Zur Abwicklung von Zahlungen kann sich Stripe weiterer Zahlungsdienste bedienen, für die
         ggf. besondere Zahlungsbedingungen gelten, auf die der Kunde ggf. gesondert hingewiesen
         wird. Weitere Informationen sind unter{" "}

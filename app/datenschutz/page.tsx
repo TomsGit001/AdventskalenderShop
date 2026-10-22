@@ -114,7 +114,7 @@ export default function Datenschutz() {
         Zahlungsabwicklung erforderlich ist (Art. 6 Abs. 1 lit. b DSGVO). Bei Zahlungsarten wie
         Rechnungs- oder Ratenkauf kann der Anbieter zusätzlich eine Bonitätsprüfung durchführen.
         Über Umfang und Ablauf informiert der jeweilige Anbieter in seiner eigenen
-        Datenschutzerklärung. Aktivierte Zahlungsarten in unserem Shop: Karten (Visa, Mastercard, Wero, Revolut Pay, American Express, Discover, Diners Club, Cartes Bancaires, JCB und China UnionPay-Zahlungen), Amazon Pay, Apple Pay, Kakao Pay, Link (by Stripe), MB Way, Naver Pay, PAYCO, PayPal, Samsung Play, Satispay, Bancontact, BLIK, iDEAL Wero, Wero, Pix und Klarna.
+        Datenschutzerklärung. Aktivierte Zahlungsarten in unserem Shop: Karten (Visa, Mastercard, Wero, Revolut Pay, American Express, Discover, Diners Club, Cartes Bancaires, JCB und China UnionPay-Zahlungen), Amazon Pay, Apple Pay, Google Pay,Kakao Pay, Link (by Stripe), MB Way, Naver Pay, PAYCO, PayPal, Samsung Play, Satispay, Bancontact, BLIK, iDEAL Wero, Wero, Pix und Klarna.
       </p>
       <p className={p}>
         Im Stripe-Checkout bestätigst du per Häkchen unsere AGB. Stripe speichert diese Bestätigung
