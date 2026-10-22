@@ -90,7 +90,7 @@ export async function POST(req: Request) {
   const data = await res.json();
   if (!res.ok || !data.url) {
     console.error("Stripe-Fehler:", data?.error?.message ?? data);
-    return NextResponse.redirect(`${siteUrl}/?checkout=error`, 303);
+    return NextResponse.redirect(`${siteUrl}/sorry-fail`, 303);
   }
 
   return NextResponse.redirect(data.url, 303);
