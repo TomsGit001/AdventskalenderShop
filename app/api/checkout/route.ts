@@ -74,7 +74,7 @@ export async function POST(req: Request) {
   // Rechtstexte im Checkout (Markdown-Links werden von Stripe unterstützt)
   p.set(
     "custom_text[submit][message]",
-    `Mit Klick auf „Jetzt kaufen“ gibst du eine **zahlungspflichtige Bestellung** auf. Es gelten unsere [AGB](${siteUrl}/agb) und die [Widerrufsbelehrung](${siteUrl}/widerruf).`
+    `Mit Klick auf "Zahlen" gibst du eine **zahlungspflichtige Bestellung** auf. Es gelten unsere [AGB](${siteUrl}/agb) und die [Widerrufsbelehrung](${siteUrl}/widerruf).`
   );
   p.set("custom_text[after_submit][message]", "Du erhältst deine Bestellbestätigung per E-Mail.");
 
