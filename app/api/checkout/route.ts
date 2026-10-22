@@ -30,6 +30,10 @@ export async function POST(req: Request) {
   // Hinweis: Der Text des Bezahl-Buttons ("Bezahlen") wird von Stripe gerendert
   // und kann nur im Stripe-Dashboard unter Einstellungen → Checkout → Anpassen
   // (Custom text / Branding) geändert werden – nicht über die Session-API.
+  // submit_type steuert nur die Art der Aktion ("pay" | "book" | "donate"),
+  // nicht die exakte Beschriftung. Stripe rendert den Button-Text anhand von
+  // locale + submit_type. Für "Jetzt kaufen" müsste der Text im Stripe-Dashboard
+  // unter Einstellungen → Checkout → Anpassen (Branding / Custom text) gesetzt werden.
   p.set("submit_type", "pay");
   p.set("success_url", `${siteUrl}/danke?session_id={CHECKOUT_SESSION_ID}`);
   p.set("cancel_url", `${siteUrl}/`);
