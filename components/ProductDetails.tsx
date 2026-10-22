@@ -93,7 +93,7 @@ export default function ProductDetails() {
               {BENEFITS.map((b) => (
                 <li
                   key={b.title}
-                  className="flex gap-3 rounded-2xl bg-white/70 p-4 shadow-sm ring-1 ring-night-900/5"
+                  className="flex gap-3 rounded-2xl bg-cornsilk p-4 shadow-sm ring-1 ring-night-900/5"
                 >
                   <span aria-hidden className="text-2xl leading-none">
                     {b.emoji}
