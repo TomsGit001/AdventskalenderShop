@@ -165,6 +165,9 @@ async function DankeContent({
 
   const session = result.status === "ok" ? result.session : null;
   const email = session?.customer_details?.email;
+  // Nur bei sofort bezahlten Sessions ("paid") melden wir den Zahlungserfolg.
+  // Bei verzögerten Zahlungsarten (z. B. "unpaid", "no_payment_required")
+  // zeigen wir stattdessen "Deine Bestellung ist eingegangen".
   const isPaid = session?.payment_status === "paid";
 
   return (
